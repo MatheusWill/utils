@@ -1,6 +1,6 @@
 {
   "name": "@maoxoo/calculate-billet-expiration",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A simple function that calculates the expiration date of a billet",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
