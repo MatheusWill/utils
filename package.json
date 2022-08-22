@@ -1,0 +1,41 @@
+{
+  "name": "calculate-billet-expiration",
+  "version": "1.0.0",
+  "description": "A simple function that calculates the expiration date of a billet",
+  "main": "index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "npm run clean && tsc",
+    "test": "jest",
+    "prepublish": "npm run test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatheusWill/calculate-billet-expiration.git"
+  },
+  "keywords": [],
+  "author": "Matheus Willian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatheusWill/calculate-billet-expiration/issues"
+  },
+  "homepage": "https://github.com/MatheusWill/calculate-billet-expiration#readme",
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "lib"
+    ]
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "devDependencies": {
+    "@types/jest": "^28.1.7",
+    "jest": "^28.1.3",
+    "ts-jest": "^28.0.8",
+    "typescript": "^4.7.4"
+  }
+}
