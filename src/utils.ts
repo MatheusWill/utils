@@ -5,12 +5,17 @@ import {
   getWeekdayNumber,
   verifyHoliday,
 } from "./date";
+import { Flags, binRegex } from "./constants";
 import fs from "fs";
 import { resolve } from "path";
 
 const holidayJsonPath = resolve(__dirname, "holidays.json");
 const holidayJson = fs.readFileSync(holidayJsonPath, "utf8");
 
+/**
+ * Returns a String value that indicates the next business day.
+ * @param expirationIn Number of working days to skip.
+ */
 export const getExpirationDateByDaysSkippingWeekendsAndHolidays = async (
   expirationIn: number
 ): Promise<string> => {
@@ -58,3 +63,16 @@ export const getExpirationDateByDaysSkippingWeekendsAndHolidays = async (
   return formattedDate;
 };
 
+/**
+ * Returns a string value that indicates the card's flag.
+ * @param bin String of bin or card.
+ */
+export const verifyCardFlag = (bin: string) => {
+  for (const flag of binRegex) {
+    if (flag.regex.test(bin)) {
+      return flag.name;
+    }
+  }
+
+  return Flags.OTHER;
+};

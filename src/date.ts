@@ -3,6 +3,8 @@ import {
   format,
   addHours,
   subHours as subHoursFunc,
+  isBefore as dateIsBefore,
+  isEqual as dateIsEqual,
 } from "date-fns";
 import fs from "fs";
 import { resolve } from "path";
@@ -28,6 +30,14 @@ export const subHours = (date: Date, hours: number) => {
 
 export const getWeekdayNumber = (date: Date) => {
   return date.getDay();
+};
+
+export const isBefore = (now: Date, before: Date): boolean => {
+  return dateIsBefore(now, before);
+};
+
+export const isEqual = (dateNow: Date, date: Date) => {
+  return dateIsEqual(dateNow, date);
 };
 
 export const verifyHoliday = async (date: Date): Promise<Date> => {
