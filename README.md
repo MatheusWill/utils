@@ -1,12 +1,20 @@
-<h1 align="center"> Calcular data de expiração do boleto </h1>
+<h1 align="center"> Funções uteis </h1>
 
-Uma biblioteca NPM para calcular o próximo dia útil a partir da data atual, pulando feriados e fins de semana.
+Uma biblioteca NPM para funções uteis no dia a dia do programador.
 
  <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 </p>
 
-## :hammer: Funcionalidades do projeto
+# Índice
+
+- [Acesso a biblioteca ](#Acesso-a-biblioteca)
+
+# :hammer: Funcionalidades do projeto
+
+## :date: Calcular dias uteis para vencimento.
+
+Criado para calcular os dias uteis para vencimento de boletos, pulando assim os feirados e finais de semana.
 
 Os testes a seguir foram feitos com o mês de abril de 2022, onde temos 2 feriados (Paixão de cristo 15/04 e Tiradentes 21/04).
 
@@ -34,6 +42,26 @@ Os testes a seguir foram feitos com o mês de abril de 2022, onde temos 2 feriad
   <img src="./img/conoslelog-result-7.png"/>
   <br><br>
 
+## :credit_card: Descobrir a bandeira do cartão de crédito.
+
+Criado para retornar a bandeira do cartão, passando o número do cartão ou o bin (6 primeiros dígitos)
+<br><br>
+
+- <b>`Exemplo 1`: Passando um cartão fictício gerado automaticamente da bandeira Visa e esperando um Master no resultado.</b>
+  <img src="./img/flag.png"/>
+  <img src="./img/result-bin.png"/>
+  <br><br>
+
+- <b>`Exemplo 2`: Passando o mesmo cartão, agora esperando a bandeira correta, Visa.</b>
+  <img src="./img/suce-bin.png"/>
+  <img src="./img/result-bin-suc.png"/>
+  <br><br>
+
+  # 📁 Acesso a biblioteca
+
+  **https://www.npmjs.com/package/@maoxoo/utils**
+  <br>
+
 - <b>`Como instalar:`</b>
   _npm i @maoxoo/calculate-billet-expiration_
   ou
@@ -47,10 +75,6 @@ Os testes a seguir foram feitos com o mês de abril de 2022, onde temos 2 feriad
 
   **JavaScript:**
   _const expirationDate = require("@maoxoo/calculate-billet-expiration");_
-
-## 📁 Acesso a biblioteca
-
-**https://www.npmjs.com/package/@maoxoo/calculate-billet-expiration**
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
